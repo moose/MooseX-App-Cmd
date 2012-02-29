@@ -28,7 +28,7 @@ my $cmd = Test::ConfigFromFile->new;
   
   like(
     $@,
-    qr/Required option missing/,
+    qr/Mandatory parameter 'moo' missing in call to \(eval\)/,
     "command died with the correct string",
   );
 }
