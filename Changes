@@ -1,3 +1,6 @@
+0.08
+    - no code changes, just repackaging distribution archive with correct root
+
 0.07
     - fix tests that started failing due to dependency error string change (offerk)
 

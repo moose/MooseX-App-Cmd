@@ -8,7 +8,7 @@ WriteMakefile(
     NAME         => 'MooseX::App::Cmd',
     VERSION_FROM => 'lib/MooseX/App/Cmd.pm',
     INSTALLDIRS  => 'site',
-    SIGN         => 1,
+#    SIGN         => 1,
     PL_FILES     => {},
     PREREQ_PM    => {
         'Test::use::ok'             => 0,
