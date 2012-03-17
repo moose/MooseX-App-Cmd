@@ -27,6 +27,8 @@ our $VERSION = "0.08";
 
 __PACKAGE__;
 
+# ABSTRACT: Mashes up MooseX::Getopt and App::Cmd
+
 __END__
 
 =pod
