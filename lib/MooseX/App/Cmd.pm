@@ -3,24 +3,25 @@ use 5.006;
 package MooseX::App::Cmd;
 use Moose;
 use File::Basename ();
+
 # VERSION
 extends qw(Moose::Object App::Cmd);
 
 sub BUILDARGS {
-  my $class = shift;
-  return {} unless @_;
-  return { arg => $_[0] } if @_ == 1;;
-  return { @_ };
+    my $class = shift;
+    return {} unless @_;
+    return { arg => $_[0] } if @_ == 1;
+    return {@_};
 }
 
 sub BUILD {
-  my ($self,$args) = @_;
+    my ( $self, $args ) = @_;
 
-  my $class = blessed $self;
-  my $arg0 = $0;
-  $self->{arg0}      = File::Basename::basename($arg0);
-  $self->{command}   = $class->_command( {}  );
-  $self->{full_arg0} = $arg0;
+    my $class = blessed $self;
+    my $arg0  = $0;
+    $self->{arg0}      = File::Basename::basename($arg0);
+    $self->{command}   = $class->_command( {} );
+    $self->{full_arg0} = $arg0;
 }
 
 __PACKAGE__->meta->make_immutable();
@@ -65,13 +66,13 @@ See L<App::Cmd/SYNOPSIS>.
         my ( $self, $opt, $args ) = @_;
 
         # you may ignore $opt, it's in the attributes anyway
-        
+
         my $result = $self->blortex ? blortex() : blort();
 
         recheck($result) if $self->recheck;
 
         print $result;
-    } 
+    }
 
 =head1 DESCRIPTION
 

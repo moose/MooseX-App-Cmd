@@ -49,13 +49,13 @@ See L<App::Cmd/SYNOPSIS>.
         my ( $self, $opt, $args ) = @_;
 
         # you may ignore $opt, it's in the attributes anyway
-        
+
         my $result = $self->blortex ? blortex() : blort();
 
         recheck($result) if $self->recheck;
 
         print $result;
-    } 
+    }
 
 =head1 DESCRIPTION
 

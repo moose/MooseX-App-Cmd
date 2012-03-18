@@ -2,24 +2,24 @@ use 5.006;
 
 package MooseX::App::Cmd::Command;
 use Moose;
+
 # VERSION
 use Getopt::Long::Descriptive ();
 extends qw(Moose::Object App::Cmd::Command);
 with 'MooseX::Getopt';
 
-
 has usage => (
     metaclass => "NoGetopt",
-    isa => "Object",
-    is  => "ro",
-    required => 1,
+    isa       => "Object",
+    is        => "ro",
+    required  => 1,
 );
 
 has app => (
     metaclass => "NoGetopt",
-    isa => "MooseX::App::Cmd",
-    is  => "ro",
-    required => 1,
+    isa       => "MooseX::App::Cmd",
+    is        => "ro",
+    required  => 1,
 );
 
 sub _process_args {
@@ -27,35 +27,42 @@ sub _process_args {
     local @ARGV = @$args;
 
     my $config_from_file;
-    if($class->meta->does_role('MooseX::ConfigFromFile')) {
+    if ( $class->meta->does_role('MooseX::ConfigFromFile') ) {
         local @ARGV = @ARGV;
 
         my $configfile;
-        my $opt_parser = Getopt::Long::Parser->new( config => [ qw( pass_through
- ) ] );
-        $opt_parser->getoptions( "configfile=s" => \$configfile );        if(!defined $configfile) {
+        my $opt_parser = Getopt::Long::Parser->new(
+            config => [
+                qw( pass_through
+                    ),
+            ],
+        );
+        $opt_parser->getoptions( "configfile=s" => \$configfile );
+        if ( !defined $configfile ) {
             my $cfmeta = $class->meta->find_attribute_by_name('configfile');
             $configfile = $cfmeta->default if $cfmeta->has_default;
         }
 
-        if(defined $configfile) {
+        if ( defined $configfile ) {
             $config_from_file = $class->get_config_from_file($configfile);
         }
     }
 
     my %processed = $class->_parse_argv(
         params => { argv => \@ARGV },
-        options => [ $class->_attrs_to_options( $config_from_file ) ],
+        options => [ $class->_attrs_to_options($config_from_file) ],
     );
 
     return (
         $processed{params},
         $processed{argv},
         usage => $processed{usage},
+
         # params from CLI are also fields in MooseX::Getopt
-        %{ $config_from_file ?
-            { %$config_from_file, %{$processed{params}} } :
-            $processed{params} },
+        %{  $config_from_file
+            ? { %$config_from_file, %{ $processed{params} } }
+            : $processed{params}
+            },
     );
 }
 
