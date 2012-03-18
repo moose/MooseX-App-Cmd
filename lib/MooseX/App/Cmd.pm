@@ -1,6 +1,7 @@
 #!/usr/bin/perl
 
 package MooseX::App::Cmd;
+# VERSION
 use File::Basename ();
 use Moose;
 
@@ -22,8 +23,6 @@ sub BUILD {
   $self->{command}   = $class->_command( {}  );
   $self->{full_arg0} = $arg0;
 }
-
-our $VERSION = "0.08";
 
 __PACKAGE__;
 

@@ -1,6 +1,5 @@
-#!/usr/bin/perl
-
 package MooseX::App::Cmd::Command;
+# VERSION
 use Moose;
 
 with qw/MooseX::Getopt/;
@@ -69,7 +68,7 @@ sub _usage_format {
 
 __PACKAGE__;
 
-__END__
+# ABSTRACT: Base class for MooseX::Getopt based App::Cmd::Commands
 
 =pod
 
