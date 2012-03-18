@@ -22,6 +22,7 @@ sub BUILD {
     $self->{arg0}      = File::Basename::basename($arg0);
     $self->{command}   = $class->_command( {} );
     $self->{full_arg0} = $arg0;
+    return;
 }
 
 __PACKAGE__->meta->make_immutable();

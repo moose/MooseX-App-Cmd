@@ -68,7 +68,7 @@ sub _process_args {
 
 sub _usage_format {
     my $class = shift;
-    $class->usage_desc();
+    return $class->usage_desc();
 }
 
 __PACKAGE__->meta->make_immutable();
