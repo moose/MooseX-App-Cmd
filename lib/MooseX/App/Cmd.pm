@@ -8,10 +8,10 @@ use File::Basename ();
 extends qw(Moose::Object App::Cmd);
 
 sub BUILDARGS {
-    my $class = shift;
-    return {} unless @_;
-    return { arg => $_[0] } if @_ == 1;
-    return {@_};
+    my ( $class, @arg ) = @_;
+    return {} if !@arg;
+    return { arg => $arg[0] } if @arg == 1;
+    return {@arg};
 }
 
 sub BUILD {
