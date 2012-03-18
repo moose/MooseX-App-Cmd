@@ -21,7 +21,7 @@ has app => (
     isa       => 'MooseX::App::Cmd',
 );
 
-sub _process_args {
+override _process_args => sub {
     my ( $class, $args ) = @_;
     local @ARGV = @{$args};
 
@@ -62,7 +62,7 @@ sub _process_args {
         ? ( %{$config_from_file}, %{ $processed{params} } )
         : %{ $processed{params} },
     );
-}
+};
 
 sub _usage_format {
     my $class = shift;
