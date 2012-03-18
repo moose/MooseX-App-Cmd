@@ -28,14 +28,6 @@ __PACKAGE__;
 
 # ABSTRACT: Mashes up MooseX::Getopt and App::Cmd
 
-__END__
-
-=pod
-
-=head1 NAME
-
-MooseX::App::Cmd - Mashes up L<MooseX::Getopt> and L<App::Cmd>.
-
 =head1 SYNOPSIS
 
 See L<App::Cmd/SYNOPSIS>.
@@ -90,23 +82,3 @@ swapping L<App::Cmd::Command> for L<MooseX::App::Cmd::Command>.
 Then you can write your moose commands as moose classes, with L<MooseX::Getopt>
 defining the options for you instead of C<opt_spec> returning a
 L<Getopt::Long::Descriptive> spec.
-
-=head1 AUTHOR
-
-Yuval Kogman E<lt>nothingmuch@woobling.orgE<gt>
-
-With contributions from:
-
-=over 4
-
-=item Guillermo Roditi E<lt>groditi@cpan.orgE<gt>
-
-=back
-
-=head1 COPYRIGHT
-
-    Copyright (c) 2007-2008 Infinity Interactive, Yuval Kogman. All rights
-    reserved This program is free software; you can redistribute it and/or
-    modify it under the same terms as Perl itself.
-
-=cut

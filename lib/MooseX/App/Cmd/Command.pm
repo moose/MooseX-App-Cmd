@@ -70,12 +70,6 @@ __PACKAGE__;
 
 # ABSTRACT: Base class for MooseX::Getopt based App::Cmd::Commands
 
-=pod
-
-=head1 NAME
-
-MooseX::App::Cmd::Command - Base class for L<MooseX::Getopt> based L<App::Cmd::Command>s.
-
 =head1 SYNOPSIS
 
     use Moose;
@@ -101,16 +95,10 @@ MooseX::App::Cmd::Command - Base class for L<MooseX::Getopt> based L<App::Cmd::C
 This is a replacement base class for L<App::Cmd::Command> classes that includes
 L<MooseX::Getopt> and the glue to combine the two.
 
-=head1 METHODS
-
-=over 4
-
-=item _process_args
+=method _process_args
 
 Replaces L<App::Cmd::Command>'s argument processing in in favour of
 L<MooseX::Getopt> based processing.
-
-=back
 
 =head1 TODO
 
@@ -120,7 +108,3 @@ This entails taking apart the attributes and getting at the descriptions.
 
 This might actually be added upstream to L<MooseX::Getopt>, so until we decide
 here's a functional but not very helpful (to the user) version anyway.
-
-=cut
-
-
