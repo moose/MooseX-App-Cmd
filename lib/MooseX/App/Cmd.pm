@@ -6,6 +6,7 @@ use English '-no_match_vars';
 use File::Basename ();
 
 # VERSION
+use MooseX::MarkAsMethods autoclean => 1;
 extends qw(Moose::Object App::Cmd);
 
 sub BUILDARGS {
@@ -24,6 +25,7 @@ sub BUILD {
     return;
 }
 
+## no critic (Modules::RequireExplicitInclusion)
 __PACKAGE__->meta->make_immutable();
 no Moose;
 1;

@@ -6,6 +6,7 @@ use Moose;
 # VERSION
 use Getopt::Long::Descriptive ();
 use MooseX::Has::Options;
+use MooseX::MarkAsMethods autoclean => 1;
 extends qw(Moose::Object App::Cmd::Command);
 with 'MooseX::Getopt';
 
@@ -68,6 +69,7 @@ sub _usage_format {    ## no critic (ProhibitUnusedPrivateSubroutines)
     return shift->usage_desc;
 }
 
+## no critic (Modules::RequireExplicitInclusion)
 __PACKAGE__->meta->make_immutable();
 no Moose;
 1;
