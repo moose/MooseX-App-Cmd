@@ -2,6 +2,7 @@ use 5.006;
 
 package MooseX::App::Cmd;
 use Moose;
+use English '-no_match_vars';
 use File::Basename ();
 
 # VERSION
@@ -18,7 +19,7 @@ sub BUILD {
     my ( $self, $args ) = @_;
 
     my $class = blessed $self;
-    my $arg0  = $0;
+    my $arg0  = $PROGRAM_NAME;
     $self->{arg0}      = File::Basename::basename($arg0);
     $self->{command}   = $class->_command( {} );
     $self->{full_arg0} = $arg0;
