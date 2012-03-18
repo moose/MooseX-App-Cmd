@@ -1,5 +1,11 @@
 Revision history for MooseX-App-Cmd
 
+{{$NEXT}}
+    - RT#75446: add all necessary metadata
+    - RT#75447: require correct version of Getopt::Long::Descriptive so
+      basic and configfile tests can pass
+    - lots of code and documentation cleanup, driven by release tests
+
 0.08      2012-03-14
     - no code changes, just repackaging distribution archive with
       correct root (mjgardner)
