@@ -12,7 +12,7 @@ with 'MooseX::Getopt';
 has usage => (
     qw(:ro :required),
     metaclass => 'NoGetopt',
-    isa       => "Object",
+    isa       => 'Object',
 );
 
 has app => (
