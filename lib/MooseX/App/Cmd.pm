@@ -9,8 +9,7 @@ use File::Basename ();
 extends qw(Moose::Object App::Cmd);
 
 sub BUILDARGS {
-    shift;
-    my @arg = @_;
+    my ( undef, @arg ) = @_;
     return {} if !@arg;
     return { arg => $arg[0] } if @arg == 1;
     return {@arg};
