@@ -33,7 +33,7 @@ no Moose;
 
 =head1 SYNOPSIS
 
-See L<App::Cmd/SYNOPSIS>.
+See L<SYNOPSIS in App::Cmd|App::Cmd/SYNOPSIS>.
 
     package YourApp::Cmd;
 	use Moose;
@@ -77,11 +77,14 @@ See L<App::Cmd/SYNOPSIS>.
 
 =head1 DESCRIPTION
 
-This module marries L<App::Cmd> with L<MooseX::Getopt>.
+This module marries L<App::Cmd|App::Cmd> with L<MooseX::Getopt|MooseX::Getopt>.
 
-Use it like L<App::Cmd> advises (especially see L<App::Cmd::Tutorial>),
-swapping L<App::Cmd::Command> for L<MooseX::App::Cmd::Command>.
+Use it like L<App::Cmd|App::Cmd> advises (especially see
+L<App::Cmd::Tutorial|App::Cmd::Tutorial>), swapping
+L<App::Cmd::Command|App::Cmd::Command> for
+L<MooseX::App::Cmd::Command|MooseX::App::Cmd::Command>.
 
-Then you can write your moose commands as moose classes, with L<MooseX::Getopt>
+Then you can write your moose commands as Moose classes, with
+L<MooseX::Getopt|MooseX::Getopt>
 defining the options for you instead of C<opt_spec> returning a
-L<Getopt::Long::Descriptive> spec.
+L<Getopt::Long::Descriptive|Getopt::Long::Descriptive> spec.
