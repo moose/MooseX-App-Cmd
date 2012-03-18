@@ -39,7 +39,7 @@ sub _process_args {
         $opt_parser->getoptions( 'configfile=s' => \$configfile );
         if ( !defined $configfile ) {
             my $cfmeta = $class->meta->find_attribute_by_name('configfile');
-            $configfile = $cfmeta->default if $cfmeta->has_default;
+            if ( $cfmeta->has_default ) { $configfile = $cfmeta->default }
         }
 
         if ( defined $configfile ) {
@@ -58,10 +58,9 @@ sub _process_args {
         usage => $processed{usage},
 
         # params from CLI are also fields in MooseX::Getopt
-        %{  $config_from_file
-            ? { %{$config_from_file}, %{ $processed{params} } }
-            : $processed{params}
-            },
+        $config_from_file
+        ? ( %{$config_from_file}, %{ $processed{params} } )
+        : %{ $processed{params} },
     );
 }
 
