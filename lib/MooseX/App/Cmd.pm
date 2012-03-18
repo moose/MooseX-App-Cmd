@@ -33,13 +33,10 @@ no Moose;
 
 =head1 SYNOPSIS
 
-See L<SYNOPSIS in App::Cmd|App::Cmd/SYNOPSIS>.
-
     package YourApp::Cmd;
 	use Moose;
 
     extends qw(MooseX::App::Cmd);
-
 
 
     package YourApp::Cmd::Command::blort;
@@ -93,3 +90,17 @@ L<Getopt::Long::Descriptive|Getopt::Long::Descriptive> spec.
 
 After calling C<new> this method is automatically run, setting underlying
 L<App::Cmd|App::Cmd> attributes as per its documentation.
+
+=head1 SEE ALSO
+
+=over
+
+=item L<App::Cmd|App::Cmd>
+
+=item L<App::Cmd::Tutorial|App::Cmd::Tutorial>
+
+=item L<MooseX::Getopt|MooseX::Getopt>
+
+=item L<MooseX::App::Cmd::Command|MooseX::App::Cmd::Command>
+
+=back
