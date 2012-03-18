@@ -64,9 +64,8 @@ override _process_args => sub {
     );
 };
 
-sub _usage_format {
-    my $class = shift;
-    return $class->usage_desc();
+sub _usage_format {    ## no critic (ProhibitUnusedPrivateSubroutines)
+    return shift->usage_desc;
 }
 
 __PACKAGE__->meta->make_immutable();
