@@ -1,26 +1,31 @@
-0.08
-    - no code changes, just repackaging distribution archive with correct root
+Revision history for MooseX-App-Cmd
 
-0.07
-    - fix tests that started failing due to dependency error string change (offerk)
+0.08      2012-03-14
+    - no code changes, just repackaging distribution archive with
+      correct root (mjgardner)
 
-0.06
+0.07      2012-02-29
+    - fix tests that started failing due to dependency error
+      string change (offerk)
+
+0.06      2009-09-17
     - various fixes for upstream version of App::Cmd (vovkasm & brunov)
 
-0.05
+0.05      2009-07-05
     - Various minor fixes due to upstream module changes
 
-0.04
+0.04      2008-07-17
     - Fix failing test when no Test::Output is available.
       No code change (lestrrat)
 
-0.03
-    - EMulate App::Cmd's new + tests (groditi)
+0.03      2008-07-15
+    - Emulate App::Cmd's new + tests (groditi)
     - Fix for newest MX::Getopt (dann)
-    - Add the ability to handle --configfile when used with MX::ConfigFromFile (lestrrat)
+    - Add the ability to handle --configfile when used
+      with MX::ConfigFromFile (lestrrat)
 
-0.02
+0.02      2008-01-21
     - Use MooseX::Getopt 0.09's Getopt::Long::Descriptive features
 
-0.01
+0.01      2008-01-15
     - Initial version
