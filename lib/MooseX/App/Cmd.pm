@@ -88,3 +88,8 @@ Then you can write your moose commands as Moose classes, with
 L<MooseX::Getopt|MooseX::Getopt>
 defining the options for you instead of C<opt_spec> returning a
 L<Getopt::Long::Descriptive|Getopt::Long::Descriptive> spec.
+
+=method BUILD
+
+After calling C<new> this method is automatically run, setting underlying
+L<App::Cmd|App::Cmd> attributes as per its documentation.
