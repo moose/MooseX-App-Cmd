@@ -5,21 +5,20 @@ use Moose;
 
 # VERSION
 use Getopt::Long::Descriptive ();
+use MooseX::Has::Options;
 extends qw(Moose::Object App::Cmd::Command);
 with 'MooseX::Getopt';
 
 has usage => (
-    metaclass => "NoGetopt",
+    qw(:ro :required),
+    metaclass => 'NoGetopt',
     isa       => "Object",
-    is        => "ro",
-    required  => 1,
 );
 
 has app => (
-    metaclass => "NoGetopt",
-    isa       => "MooseX::App::Cmd",
-    is        => "ro",
-    required  => 1,
+    qw(:ro :required),
+    metaclass => 'NoGetopt',
+    isa       => 'MooseX::App::Cmd',
 );
 
 sub _process_args {
@@ -37,7 +36,7 @@ sub _process_args {
                     ),
             ],
         );
-        $opt_parser->getoptions( "configfile=s" => \$configfile );
+        $opt_parser->getoptions( 'configfile=s' => \$configfile );
         if ( !defined $configfile ) {
             my $cfmeta = $class->meta->find_attribute_by_name('configfile');
             $configfile = $cfmeta->default if $cfmeta->has_default;
@@ -86,8 +85,8 @@ no Moose;
     # no need to set opt_spec
     # see MooseX::Getopt for documentation on how to specify options
     has option_field => (
-        isa => "Str",
-        is  => "rw",
+        isa => 'Str',
+        is  => 'rw',
         required => 1,
     );
 

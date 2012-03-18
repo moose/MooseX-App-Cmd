@@ -49,18 +49,18 @@ See L<SYNOPSIS in App::Cmd|App::Cmd/SYNOPSIS>.
 
     has blortex => (
         traits => [qw(Getopt)],
-        isa => "Bool",
-        is  => "rw",
-        cmd_aliases   => "X",
-        documentation => "use the blortext algorithm",
+        isa => 'Bool',
+        is  => 'rw',
+        cmd_aliases   => 'X',
+        documentation => 'use the blortext algorithm',
     );
 
     has recheck => (
         traits => [qw(Getopt)],
-        isa => "Bool",
-        is  => "rw",
-        cmd_aliases => "r",
-        documentation => "recheck all results",
+        isa => 'Bool',
+        is  => 'rw',
+        cmd_aliases => 'r',
+        documentation => 'recheck all results',
     );
 
     sub execute {
