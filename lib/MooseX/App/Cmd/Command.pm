@@ -105,14 +105,3 @@ L<MooseX::Getopt|MooseX::Getopt> and the glue to combine the two.
 
 Replaces L<App::Cmd::Command|App::Cmd::Command>'s argument processing in favor
 of L<MooseX::Getopt|MooseX::Getopt> based processing.
-
-=head1 TODO
-
-Full support for L<Getopt::Long::Descriptive|Getopt::Long::Descriptive>'s
-abilities is not yet written.
-
-This entails taking apart the attributes and getting at the descriptions.
-
-This might actually be added upstream to L<MooseX::Getopt|MooseX::Getopt>, so
-until we decide here's a functional but not very helpful (to the user) version
-anyway.
