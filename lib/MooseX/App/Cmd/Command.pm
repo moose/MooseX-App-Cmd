@@ -1,3 +1,5 @@
+use 5.006;
+
 package MooseX::App::Cmd::Command;
 # VERSION
 use Moose;
@@ -66,7 +68,9 @@ sub _usage_format {
     $class->usage_desc();
 }
 
-__PACKAGE__;
+__PACKAGE__->meta->make_immutable();
+no Moose;
+1;
 
 # ABSTRACT: Base class for MooseX::Getopt based App::Cmd::Commands
 

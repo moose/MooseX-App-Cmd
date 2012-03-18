@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+use 5.006;
 
 package MooseX::App::Cmd;
 # VERSION
@@ -24,7 +24,9 @@ sub BUILD {
   $self->{full_arg0} = $arg0;
 }
 
-__PACKAGE__;
+__PACKAGE__->meta->make_immutable();
+no Moose;
+1;
 
 # ABSTRACT: Mashes up MooseX::Getopt and App::Cmd
 
