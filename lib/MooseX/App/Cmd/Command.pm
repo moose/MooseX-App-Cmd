@@ -1,16 +1,12 @@
 use 5.006;
 
 package MooseX::App::Cmd::Command;
-# VERSION
 use Moose;
-
-with qw/MooseX::Getopt/;
-
-extends qw(Moose::Object App::Cmd::Command);
-
-with qw(MooseX::Getopt);
-
+# VERSION
 use Getopt::Long::Descriptive ();
+extends qw(Moose::Object App::Cmd::Command);
+with 'MooseX::Getopt';
+
 
 has usage => (
     metaclass => "NoGetopt",

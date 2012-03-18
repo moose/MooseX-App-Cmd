@@ -1,10 +1,9 @@
 use 5.006;
 
 package MooseX::App::Cmd;
-# VERSION
-use File::Basename ();
 use Moose;
-
+use File::Basename ();
+# VERSION
 extends qw(Moose::Object App::Cmd);
 
 sub BUILDARGS {
