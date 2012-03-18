@@ -23,7 +23,7 @@ has app => (
 
 sub _process_args {
     my ( $class, $args, @params ) = @_;
-    local @ARGV = @$args;
+    local @ARGV = @{$args};
 
     my $config_from_file;
     if ( $class->meta->does_role('MooseX::ConfigFromFile') ) {
@@ -59,7 +59,7 @@ sub _process_args {
 
         # params from CLI are also fields in MooseX::Getopt
         %{  $config_from_file
-            ? { %$config_from_file, %{ $processed{params} } }
+            ? { %{$config_from_file}, %{ $processed{params} } }
             : $processed{params}
             },
     );
