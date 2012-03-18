@@ -22,7 +22,7 @@ has app => (
 );
 
 sub _process_args {
-    my ( $class, $args, @params ) = @_;
+    my ( $class, $args ) = @_;
     local @ARGV = @{$args};
 
     my $config_from_file;

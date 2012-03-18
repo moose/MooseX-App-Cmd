@@ -9,15 +9,15 @@ use File::Basename ();
 extends qw(Moose::Object App::Cmd);
 
 sub BUILDARGS {
-    my ( $class, @arg ) = @_;
+    shift;
+    my @arg = @_;
     return {} if !@arg;
     return { arg => $arg[0] } if @arg == 1;
     return {@arg};
 }
 
 sub BUILD {
-    my ( $self, $args ) = @_;
-
+    my $self  = shift;
     my $class = blessed $self;
     $self->{arg0}      = File::Basename::basename($PROGRAM_NAME);
     $self->{command}   = $class->_command( {} );
