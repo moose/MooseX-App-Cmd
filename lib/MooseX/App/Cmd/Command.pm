@@ -40,7 +40,11 @@ override _process_args => sub {
         $opt_parser->getoptions( 'configfile=s' => \$configfile );
         if ( !defined $configfile ) {
             my $cfmeta = $class->meta->find_attribute_by_name('configfile');
-            if ( $cfmeta->has_default ) { $configfile = $cfmeta->default }
+            if ( $cfmeta->has_default ) {
+                my $default = $cfmeta->default;
+                $configfile
+                    = ref $default eq 'CODE' ? $default->() : $default;
+            }
         }
 
         if ( defined $configfile ) {

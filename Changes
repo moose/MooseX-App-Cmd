@@ -1,10 +1,13 @@
 Revision history for MooseX-App-Cmd
 
 {{$NEXT}}
-    - RT#75446: add all necessary metadata
+    - RT#74668: can use a sub {} for configfile default (yanick)
+    - RT#75446: add all necessary metadata as part of conversion
+      to Dist::Zilla (mjgardner)
     - RT#75447: require correct version of Getopt::Long::Descriptive so
-      basic and configfile tests can pass
-    - lots of code and documentation cleanup, driven by release tests
+      basic and configfile tests can pass (mjgardner)
+    - lots of code and documentation cleanup, driven by
+      release tests (mjgardner)
 
 0.08      2012-03-14
     - no code changes, just repackaging distribution archive with
