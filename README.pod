@@ -1,9 +1,9 @@
 =pod
 
 =for :stopwords Yuval Kogman Guillermo Roditi Daisuke Maki Vladimir Timofeev Bruno Vecchi
-Offer Kaye Mark Gardner Infinity Interactive, cpan testmatrix url annocpan
-anno bugtracker rt cpants kwalitee diff irc mailto metadata placeholders
-metacpan
+Offer Kaye Mark Gardner Yanick Champoux Infinity Interactive, cpan
+testmatrix url annocpan anno bugtracker rt cpants kwalitee diff irc mailto
+metadata placeholders metacpan
 
 =head1 NAME
 
@@ -209,6 +209,10 @@ Offer Kaye <offerk@cpan.org>
 =item *
 
 Mark Gardner <mjgardner@cpan.org>
+
+=item *
+
+Yanick Champoux <yanick+cpan@babyl.dyndns.org>
 
 =back
 
