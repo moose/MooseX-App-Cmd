@@ -43,7 +43,7 @@ override _process_args => sub {
             if ( $cfmeta->has_default ) {
                 my $default = $cfmeta->default;
                 $configfile
-                    = ref $default eq 'CODE' ? $default->() : $default;
+                    = ref $default eq 'CODE' ? $default->($class) : $default;
             }
         }
 
