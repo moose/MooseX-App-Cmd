@@ -38,13 +38,10 @@ override _process_args => sub {
                 = Getopt::Long::Parser->new( config => ['pass_through'] );
         }
         $opt_parser->getoptions( 'configfile=s' => \$configfile );
-        if ( !defined $configfile ) {
-            my $cfmeta = $class->meta->find_attribute_by_name('configfile');
-            if ( $cfmeta->has_default ) {
-                my $default = $cfmeta->default;
-                $configfile
-                    = ref $default eq 'CODE' ? $default->($class) : $default;
-            }
+        if ( not defined $configfile
+            and $class->can('_get_default_configfile') )
+        {
+            $configfile = $class->_get_default_configfile();
         }
 
         if ( defined $configfile ) {

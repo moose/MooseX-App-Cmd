@@ -49,9 +49,5 @@ my $cmd = Test::ConfigFromFile->new;
     local @ARGV = qw(boo);
     eval { $cmd->run };
 
-    like(
-        $@,
-        qr/ghosts go moo1 moo2 moo3/,
-        'default configfile() takes a sub()',
-    );
+    like( $@, qr/ghosts go moo1 moo2 moo3/, 'default configfile read', );
 }
