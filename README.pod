@@ -1,9 +1,9 @@
 =pod
 
 =for :stopwords Yuval Kogman Guillermo Roditi Daisuke Maki Vladimir Timofeev Bruno Vecchi
-Offer Kaye Mark Gardner Yanick Champoux Infinity Interactive, cpan
-testmatrix url annocpan anno bugtracker rt cpants kwalitee diff irc mailto
-metadata placeholders metacpan
+Offer Kaye Mark Gardner Yanick Champoux Dann Ken Crowell Infinity
+Interactive, cpan testmatrix url annocpan anno bugtracker rt cpants
+kwalitee diff irc mailto metadata placeholders metacpan
 
 =head1 NAME
 
@@ -11,7 +11,7 @@ MooseX::App::Cmd - Mashes up MooseX::Getopt and App::Cmd
 
 =head1 VERSION
 
-version 0.10
+version 0.11
 
 =head1 SYNOPSIS
 
@@ -213,6 +213,14 @@ Mark Gardner <mjgardner@cpan.org>
 =item *
 
 Yanick Champoux <yanick+cpan@babyl.dyndns.org>
+
+=item *
+
+Dann <techmemo@gmail.com>
+
+=item *
+
+Ken Crowell <oeuftete@gmail.com>
 
 =back
 
