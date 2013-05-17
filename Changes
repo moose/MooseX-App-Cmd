@@ -6,6 +6,7 @@ Revision history for MooseX-App-Cmd
     - gh#3: fix failing test introduced by MooseX::ConfigFromFile 0.08
       (ouftete)
     - point perlcritic author test to the correct perltidy config
+    - add author dependencies to Dist::Zilla dist.ini file
 0.09      2012-03-18 20:21:21 America/New_York
     - RT#74668: can use a sub {} for configfile default (yanick)
     - RT#75446: add all necessary metadata as part of conversion
