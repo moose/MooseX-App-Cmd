@@ -16,7 +16,7 @@ isa_ok( $cmd, 'Test::MyCmd' );
 is_deeply(
     [ sort $cmd->command_names ],
     [   sort
-            qw(help --help -h -? commands frob frobulate justusage stock bark)
+            qw(help --help -h --version -? commands frob frobulate justusage stock bark version)
     ],
     'got correct list of registered command names',
 );
@@ -28,6 +28,7 @@ is_deeply(
     [   qw(
             App::Cmd::Command::commands
             App::Cmd::Command::help
+            App::Cmd::Command::version
             Test::MyCmd::Command::bark
             Test::MyCmd::Command::frobulate
             Test::MyCmd::Command::justusage
