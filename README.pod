@@ -16,7 +16,7 @@ version 0.11
 =head1 SYNOPSIS
 
     package YourApp::Cmd;
-	use Moose;
+    use Moose;
 
     extends qw(MooseX::App::Cmd);
 

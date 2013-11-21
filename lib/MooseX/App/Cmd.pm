@@ -12,7 +12,7 @@ extends qw(Moose::Object App::Cmd);
 sub BUILDARGS {
     my ( undef, @arg ) = @_;
     return {} if !@arg;
-    return { arg => $arg[0] } if @arg == 1;
+    return { arg => $arg[0] } if 1 == @arg;
     return {@arg};
 }
 
@@ -35,7 +35,7 @@ no Moose;
 =head1 SYNOPSIS
 
     package YourApp::Cmd;
-	use Moose;
+    use Moose;
 
     extends qw(MooseX::App::Cmd);
 
