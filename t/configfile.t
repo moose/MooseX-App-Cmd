@@ -3,15 +3,13 @@
 use strict;
 use warnings;
 use Test::More;
+use Any::Moose;
 
 BEGIN {
-    eval {
-        require MooseX::ConfigFromFile;
-        require YAML;
-    };
+    eval 'require ' . any_moose('X::ConfigFromFile') . '; require YAML;';
     if ($@) {
         plan skip_all =>
-            'These tests require MooseX::ConfigFromFile and YAML';
+            'These tests require Mo(o|u)seX::ConfigFromFile and YAML';
     }
     else {
         plan tests => 3;

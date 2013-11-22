@@ -1,23 +1,25 @@
 use 5.006;
 
 package MooseX::App::Cmd::Command;
-use Moose;
+use Any::Moose;
 
 # VERSION
 use Getopt::Long::Descriptive ();
 use MooseX::Has::Options;
-use MooseX::MarkAsMethods autoclean => 1;
-extends qw(Moose::Object App::Cmd::Command);
-with 'MooseX::Getopt';
+use namespace::autoclean;
+extends any_moose('::Object'), 'App::Cmd::Command';
+with any_moose('X::Getopt');
 
 has usage => (
-    qw(:ro :required),
+    is        => 'ro',
+    required  => 1,
     metaclass => 'NoGetopt',
     isa       => 'Object',
 );
 
 has app => (
-    qw(:ro :required),
+    is        => 'ro',
+    required  => 1,
     metaclass => 'NoGetopt',
     isa       => 'MooseX::App::Cmd',
 );
@@ -27,7 +29,7 @@ override _process_args => sub {
     local @ARGV = @{$args};
 
     my $config_from_file;
-    if ( $class->meta->does_role('MooseX::ConfigFromFile') ) {
+    if ( $class->meta->does_role( any_moose('X::ConfigFromFile') ) ) {
         local @ARGV = @ARGV;
 
         my $configfile;
@@ -72,7 +74,7 @@ sub _usage_format {    ## no critic (ProhibitUnusedPrivateSubroutines)
 
 ## no critic (Modules::RequireExplicitInclusion)
 __PACKAGE__->meta->make_immutable();
-no Moose;
+no Any::Moose;
 1;
 
 # ABSTRACT: Base class for MooseX::Getopt based App::Cmd::Commands

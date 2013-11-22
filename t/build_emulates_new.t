@@ -10,7 +10,7 @@ use Test::More tests => 1;
     use base 'App::Cmd';
 
     package Bar;
-    use Moose;
+    use Any::Moose;
     extends 'MooseX::App::Cmd';
 
 }

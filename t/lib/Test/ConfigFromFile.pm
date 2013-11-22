@@ -1,5 +1,5 @@
 package Test::ConfigFromFile;
-use Moose;
+use Any::Moose;
 
 extends qw(MooseX::App::Cmd);
 

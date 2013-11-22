@@ -1,5 +1,5 @@
 package Test::MyCmd::Command::frobulate;
-use Moose;
+use Any::Moose;
 
 extends qw(MooseX::App::Cmd::Command);
 
