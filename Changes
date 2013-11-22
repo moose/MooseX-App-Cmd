@@ -1,6 +1,8 @@
 Revision history for MooseX-App-Cmd
 
 {{$NEXT}}
+
+0.11      2013-11-22 11:48:20 America/New_York
     - gh#6: document --configfile option added in 0.03 (reported by abraxxa)
     - gh#8: fix missing commands in test files (ubermichael)
 0.10      2013-05-17 10:29:01 America/New_York
