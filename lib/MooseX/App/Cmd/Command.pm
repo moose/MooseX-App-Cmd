@@ -5,7 +5,6 @@ use Any::Moose;
 
 # VERSION
 use Getopt::Long::Descriptive ();
-use MooseX::Has::Options;
 use namespace::autoclean;
 extends any_moose('::Object'), 'App::Cmd::Command';
 with any_moose('X::Getopt');
