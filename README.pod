@@ -1,9 +1,9 @@
 =pod
 
 =for :stopwords Yuval Kogman Guillermo Roditi Daisuke Maki Vladimir Timofeev Bruno Vecchi
-Offer Kaye Mark Gardner Yanick Champoux Dann Ken Crowell Infinity
-Interactive, cpan testmatrix url annocpan anno bugtracker rt cpants
-kwalitee diff irc mailto metadata placeholders metacpan
+Offer Kaye Mark Gardner Yanick Champoux Dann Ken Crowell Michael Joyce
+Infinity Interactive, cpan testmatrix url annocpan anno bugtracker rt
+cpants kwalitee diff irc mailto metadata placeholders metacpan
 
 =head1 NAME
 
@@ -221,6 +221,10 @@ Dann <techmemo@gmail.com>
 =item *
 
 Ken Crowell <oeuftete@gmail.com>
+
+=item *
+
+Michael Joyce <ubermichael@gmail.com>
 
 =back
 
