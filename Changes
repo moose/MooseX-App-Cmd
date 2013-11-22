@@ -1,7 +1,7 @@
 Revision history for MooseX-App-Cmd
 
 {{$NEXT}}
-
+    - gh#8: fix missing commands in test files (ubermichael)
 0.10      2013-05-17 10:29:01 America/New_York
     - RT#84437: fix missing parameter in call to default function
       (chips, ouftete)
