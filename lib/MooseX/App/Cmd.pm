@@ -6,7 +6,7 @@ use English '-no_match_vars';
 use File::Basename ();
 
 # VERSION
-use namespace::autoclean;
+use namespace::clean -except => 'meta';
 extends any_moose('::Object'), 'App::Cmd';
 
 sub BUILDARGS {
