@@ -1,6 +1,8 @@
 Revision history for MooseX-App-Cmd
 
 {{$NEXT}}
+
+0.22      2013-12-02 10:56:59 America/New_York (TRIAL RELEASE)
     - forgot to update changelog last time, no code changes
 0.21      2013-12-02 10:47:32 America/New_York (TRIAL RELEASE)
     - do a better job of not requiring Moose for build/install
