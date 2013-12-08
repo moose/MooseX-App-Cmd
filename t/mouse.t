@@ -2,12 +2,12 @@
 
 use strict;
 use warnings;
-use Test::More;
-
-eval "use Mouse";
-plan skip_all => 'Mouse required to test Mouse usage' if $@;
-plan tests => 1;
+use Test::More tests => 2;
 
 use lib 't/lib';
-use Test::MyAny::Mouse;
-my $cmd = new_ok('Test::MyAny::Mouse');
+SKIP: {
+    eval { require Mouse };
+    skip 'Mouse required to test Mouse usage', 2 if $@;
+    use_ok('Test::MyAny::Mouse');
+    my $cmd = new_ok('Test::MyAny::Mouse');
+}
