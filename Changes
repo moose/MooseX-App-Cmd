@@ -1,7 +1,7 @@
 Revision history for MooseX-App-Cmd
 
 {{$NEXT}}
-
+    - test for Mo(o|u)seX::Getopt before running Mo(o|u)se-specific tests
 0.24      2013-12-08 21:01:55 America/New_York (TRIAL RELEASE)
     - add requirements, recommendations and provides to meta files
 0.23      2013-12-08 15:52:56 America/New_York (TRIAL RELEASE)
