@@ -1,7 +1,7 @@
 Revision history for MooseX-App-Cmd
 
 {{$NEXT}}
-
+    - update developer and Dist::Zilla author dependencies
 0.26      2013-12-16 17:19:52 America/New_York (TRIAL RELEASE)
     - better reporting of skipped Moose/Mouse tests
     - add release test to check changelog for new content
