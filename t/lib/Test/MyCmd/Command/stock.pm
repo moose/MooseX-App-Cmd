@@ -1,7 +1,7 @@
 package Test::MyCmd::Command::stock;
 use Any::Moose;
 
-extends qw(MooseX::App::Cmd::Command);
+extends any_moose('X::App::Cmd::Command');
 
 =head1 NAME
 

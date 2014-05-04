@@ -70,7 +70,7 @@ is_deeply(
 
     like(
         $@,
-        qr/Mandatory parameter 'wow' missing in call to \(eval\)/,
+        qr/Mandatory parameter 'wow' missing in call to ["(]eval[)"]/,
         'required option field is missing',
     );
 }

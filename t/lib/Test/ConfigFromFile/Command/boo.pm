@@ -2,7 +2,7 @@ package Test::ConfigFromFile::Command::boo;
 use Any::Moose;
 use YAML();
 
-extends qw(MooseX::App::Cmd::Command);
+extends any_moose('X::App::Cmd::Command');
 with any_moose('X::ConfigFromFile');
 
 =head1 NAME
