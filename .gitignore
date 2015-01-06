@@ -1,2 +1,7 @@
 /.build
-/MooseX-App-Cmd-*
+/.ackrc
+/.build/
+!/.gitignore
+/.latest
+/MooseX-App-Cmd-*/
+/MooseX-App-Cmd-*.tar.gz
