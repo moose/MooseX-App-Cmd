@@ -1,6 +1,8 @@
 Revision history for MooseX-App-Cmd
 
 {{$NEXT}}
+
+0.29      2015-01-05 18:47:11-08:00 America/Vancouver
     - re-release 0.28 as stable
 
 0.28      2014-05-06 16:20:58+00:00 UTC (TRIAL RELEASE)
