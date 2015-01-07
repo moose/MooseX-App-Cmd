@@ -1,7 +1,7 @@
 package Test::MyCmd::Command::frobulate;
-use Any::Moose;
+use Moose;
 
-extends any_moose('X::App::Cmd::Command');
+extends 'MooseX::App::Cmd::Command';
 
 sub command_names {
     return qw(frobulate frob);

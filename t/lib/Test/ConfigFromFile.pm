@@ -1,6 +1,6 @@
 package Test::ConfigFromFile;
-use Any::Moose;
+use Moose;
 
-extends any_moose('X::App::Cmd');
+extends 'MooseX::App::Cmd';
 
 1;

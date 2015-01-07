@@ -1,13 +1,13 @@
 use 5.006;
 
 package MooseX::App::Cmd;
-use Any::Moose;
+use Moose;
 use English '-no_match_vars';
 use File::Basename ();
 
 # VERSION
 use namespace::clean -except => 'meta';
-extends any_moose('::Object'), 'App::Cmd';
+extends 'Moose::Object', 'App::Cmd';
 
 sub BUILDARGS {
     my ( undef, @arg ) = @_;
@@ -27,7 +27,6 @@ sub BUILD {
 
 ## no critic (Modules::RequireExplicitInclusion)
 __PACKAGE__->meta->make_immutable();
-no Any::Moose;
 1;
 
 # ABSTRACT: Mashes up MooseX::Getopt and App::Cmd

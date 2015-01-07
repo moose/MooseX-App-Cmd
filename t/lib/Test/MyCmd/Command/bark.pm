@@ -1,7 +1,7 @@
 package Test::MyCmd::Command::bark;
-use Any::Moose;
+use Moose;
 
-extends any_moose('X::App::Cmd::Command');
+extends 'MooseX::App::Cmd::Command';
 
 =head1 NAME
 
