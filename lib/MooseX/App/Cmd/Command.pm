@@ -28,7 +28,7 @@ override _process_args => sub {
     local @ARGV = @{$args};
 
     my $config_from_file;
-    if ( $class->meta->does_role( 'MooseX::ConfigFromFile' ) ) {
+    if ( $class->meta->does_role('MooseX::ConfigFromFile') ) {
         local @ARGV = @ARGV;
 
         my $configfile;
