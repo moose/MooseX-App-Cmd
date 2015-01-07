@@ -111,5 +111,5 @@ of L<MooseX::Getopt|MooseX::Getopt> based processing.
 If your class does the L<MooseX::ConfigFromFile|MooseX::ConfigFromFile> role
 (or any of its consuming roles like
 L<MooseX::SimpleConfig|MooseX::SimpleConfig>), this will provide an additional
-B<--configfile> command line option for loading options from a configuration
+C<--configfile> command line option for loading options from a configuration
 file.
