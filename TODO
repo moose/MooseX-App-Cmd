@@ -1,3 +1,7 @@
+
+The perlcritic and perltidy configs probably don't match the state of the code
+currently -- update the configs and/or the code as needed
+
 Full support for Getopt::Long::Descriptive's abilities is not yet written.
 
 This entails taking apart the attributes and getting at the descriptions.
