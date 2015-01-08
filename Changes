@@ -1,6 +1,8 @@
 Revision history for MooseX-App-Cmd
 
 {{$NEXT}}
+
+0.30      2015-01-08 03:54:49Z
     - MouseX::App::Cmd has been split off into its own distribution;
       now this dist uses Moose unconditionally, rather than Any::Moose
 
