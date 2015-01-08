@@ -1,9 +1,9 @@
 package MooseX::App::Cmd;
+
 use Moose;
 use English '-no_match_vars';
 use File::Basename ();
 
-# VERSION
 use namespace::autoclean;
 extends 'Moose::Object', 'App::Cmd';
 

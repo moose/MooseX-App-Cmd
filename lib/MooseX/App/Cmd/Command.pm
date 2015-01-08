@@ -1,7 +1,6 @@
 package MooseX::App::Cmd::Command;
-use Moose;
 
-# VERSION
+use Moose;
 use Getopt::Long::Descriptive ();
 use namespace::autoclean;
 extends 'Moose::Object', 'App::Cmd::Command';
