@@ -24,11 +24,11 @@ has app => (
 );
 
 override _process_args => sub {
-    my ( $class, $args ) = @_;
+    my ($class, $args) = @_;
     local @ARGV = @{$args};
 
     my $config_from_file;
-    if ( $class->meta->does_role('MooseX::ConfigFromFile') ) {
+    if ($class->meta->does_role('MooseX::ConfigFromFile')) {
         local @ARGV = @ARGV;
 
         my $configfile;
@@ -39,13 +39,13 @@ override _process_args => sub {
                 = Getopt::Long::Parser->new( config => ['pass_through'] );
         }
         $opt_parser->getoptions( 'configfile=s' => \$configfile );
-        if ( not defined $configfile
-            and $class->can('_get_default_configfile') )
+        if (not defined $configfile
+            and $class->can('_get_default_configfile'))
         {
             $configfile = $class->_get_default_configfile();
         }
 
-        if ( defined $configfile ) {
+        if (defined $configfile) {
             $config_from_file = $class->get_config_from_file($configfile);
         }
     }
@@ -62,8 +62,8 @@ override _process_args => sub {
 
         # params from CLI are also fields in MooseX::Getopt
         $config_from_file
-        ? ( %{$config_from_file}, %{ $processed{params} } )
-        : %{ $processed{params} },
+            ? (%$config_from_file, %{ $processed{params} })
+            : %{ $processed{params} },
     );
 };
 
