@@ -1,5 +1,3 @@
-use 5.006;
-
 package MooseX::App::Cmd;
 use Moose;
 use English '-no_match_vars';
