@@ -5,7 +5,7 @@ use Moose;
 
 # VERSION
 use Getopt::Long::Descriptive ();
-use namespace::clean -except => 'meta';
+use namespace::autoclean;
 extends 'Moose::Object', 'App::Cmd::Command';
 with 'MooseX::Getopt';
 
