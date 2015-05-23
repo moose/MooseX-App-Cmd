@@ -1,6 +1,6 @@
 package MooseX::App::Cmd;
 
-our $VERSION = '0.31';
+our $VERSION = '0.32';
 
 use Moose;
 use English '-no_match_vars';
