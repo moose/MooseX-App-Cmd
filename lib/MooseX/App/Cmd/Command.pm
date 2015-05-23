@@ -1,5 +1,7 @@
 package MooseX::App::Cmd::Command;
 
+our $VERSION = '0.31';
+
 use Moose;
 use Getopt::Long::Descriptive ();
 use namespace::autoclean;

@@ -1,5 +1,7 @@
 package MooseX::App::Cmd;
 
+our $VERSION = '0.31';
+
 use Moose;
 use English '-no_match_vars';
 use File::Basename ();
