@@ -3,7 +3,6 @@ package MooseX::App::Cmd;
 our $VERSION = '0.32';
 
 use Moose;
-use English '-no_match_vars';
 use File::Basename ();
 
 use namespace::autoclean;
@@ -19,9 +18,9 @@ sub BUILDARGS {
 sub BUILD {
     my $self  = shift;
     my $class = blessed $self;
-    $self->{arg0}      = File::Basename::basename($PROGRAM_NAME);
+    $self->{arg0}      = File::Basename::basename($0);
     $self->{command}   = $class->_command( {} );
-    $self->{full_arg0} = $PROGRAM_NAME;
+    $self->{full_arg0} = $0;
     return;
 }
 
