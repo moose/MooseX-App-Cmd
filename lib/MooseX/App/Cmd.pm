@@ -22,6 +22,7 @@ sub BUILD {
     $self->{arg0}      = File::Basename::basename($PROGRAM_NAME);
     $self->{command}   = $class->_command( {} );
     $self->{full_arg0} = $PROGRAM_NAME;
+    $self->{show_version} = 0;
     return;
 }
 
