@@ -1,6 +1,6 @@
 Revision history for MooseX-App-Cmd
 
-{{$NEXT}}
+0.32      2015-09-12 01:10:11Z
     - fix incompatibility with App::Cmd 0.328 by calling its
       constructor (via MooseX::NonMoose) (RT#107025)
 
