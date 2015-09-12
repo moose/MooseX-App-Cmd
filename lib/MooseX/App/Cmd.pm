@@ -3,26 +3,10 @@ package MooseX::App::Cmd;
 our $VERSION = '0.32';
 
 use Moose;
-use File::Basename ();
+use MooseX::NonMoose;
+extends 'App::Cmd';
 
 use namespace::autoclean;
-extends 'Moose::Object', 'App::Cmd';
-
-sub BUILDARGS {
-    my ( undef, @arg ) = @_;
-    return {} if !@arg;
-    return { arg => $arg[0] } if 1 == @arg;
-    return {@arg};
-}
-
-sub BUILD {
-    my $self  = shift;
-    my $class = blessed $self;
-    $self->{arg0}      = File::Basename::basename($0);
-    $self->{command}   = $class->_command( {} );
-    $self->{full_arg0} = $0;
-    return;
-}
 
 ## no critic (Modules::RequireExplicitInclusion)
 __PACKAGE__->meta->make_immutable();

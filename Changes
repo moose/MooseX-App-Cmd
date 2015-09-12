@@ -1,6 +1,8 @@
 Revision history for MooseX-App-Cmd
 
 {{$NEXT}}
+    - fix incompatibility with App::Cmd 0.328 by calling its
+      constructor (via MooseX::NonMoose) (RT#107025)
 
 0.31      2015-05-23 03:40:01Z
     - fix test failures on MSWin32 (see RT#96863)
