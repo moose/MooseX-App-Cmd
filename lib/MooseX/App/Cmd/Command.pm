@@ -1,6 +1,6 @@
 package MooseX::App::Cmd::Command;
 
-our $VERSION = '0.32';
+our $VERSION = '0.33';
 
 use Moose;
 use Getopt::Long::Descriptive ();
