@@ -1,6 +1,7 @@
 Revision history for MooseX-App-Cmd
 
 {{$NEXT}}
+    - soften tests to handle changes in App::Cmd 0.332 (RT#134752)
 
 0.32      2015-09-12 01:10:11Z
     - fix incompatibility with App::Cmd 0.328 by calling its
